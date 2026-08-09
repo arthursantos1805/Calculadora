@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+@media screen and (max-width: 350px){
+    button.botao {
+    padding: 14px;
+    }
+
+    #calculadora div#res {
+        height: 65px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #calculadora #res {
+        height: 110px;
+        font-size: 2.3em;
+    }
+
+    #calculadora .botao {
+        padding: 30px;
+        font-size: 2em;
+    }
+
+    #calculadora #operacoes .botao {
+        font-size: 2em;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'UnifrakturMaguntia';
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('catedralgotica.jpg');
+    background-size: cover;
+}
+
+#filtro {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.829);
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+}
+
+main img {
+    width: 150px;
+    height: 20px;
+}
+
+#calculadora {
+    position: relative;
+    border: 6px solid rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.418);
+    background-color: rgb(36, 36, 36);
+}
+
+div#res {
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.767);
+    margin-bottom: 15px;
+    border-radius: 8px 8px 0px 0px;
+    padding: 10px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(209, 209, 209);
+    background-image: url('alucard.jpg');
+    background-size: cover;
+}
+
+div#numerosetc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.botao {
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    transition: transform 0.5s, border 1s, background-color 0.5s;
+    text-align: center;
+}
+
+.botao:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 2px rgb(29, 29, 29) solid;
+    background-color: rgb(167, 167, 167);
+}
+
+.numero {
+    font-family: "Pirata One";
+}
+
+#operacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+#operacoes .botao {
+    font-size: 1.5em;
+}
+
+#operacoes #limpar {
+    font-size: 1em;
+    text-align: center;
+    grid-row: 2 ;
+    grid-column: 1 / -1;
+}
