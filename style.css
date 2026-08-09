@@ -46,6 +46,7 @@ body {
     justify-content: center;
     background-image: url('catedralgotica.jpg');
     background-size: cover;
+    color: black;
 }
 
 #filtro {
